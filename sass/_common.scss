@@ -1,84 +1,226 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever{
-//         @include sized-sprite($icons, badge_hit); //or
-// 	@include s(badge_hit); //gets default value for spritemap as $icons
-//     }
-// ### animation example
-//     @include keyframes(rotate) {
-//        from {
-//           @include rotate(0);
-//        }
-//        to {
-//           @include rotate(360);
-//         }
-//     }
-// ## animation usage
-//     body:hover{
-// 	    @include animation(rotate 200s linear infinite);
-//     }
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in);
-// ## gradient example
-//     @include background-image(linear-gradient(#232323, #5c5c5c));
-// ## making bw-images
-//     img{@extend %gray;}
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     @min-screen(320){ css goes here}
-// @max-screen(1000), @iphone5, @iphone4, @ipad-retina, @ipad, @hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3 {
-//       .item-#{$i} { width: 2em * $i; }
-//     }
-//     @each $s in a,b,c{
-// 	    #{$s}
-//     }
-// BTW these comments will not render into css
-// for awesomeness use .🍺 class. Example:
-// .🍺{beer:everything}
-
-//*{-webkit-transition: .3s all;}
-
-*{margin:0;padding:0; }
-@include iphone{*{-webkit-text-size-adjust: none;}}
-button::-moz-focus-inner { padding: 0; border: 0 }
-input[type="submit"]::-moz-focus-inner { padding: 0; border: 0 }
-
+/* ------------------------------------- Reset css -------------------------------------------- */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5,
+h6, p, blockquote, pre,a, abbr, acronym, address, big,
+cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small,
+strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt,
+dd, ol, ul, li,fieldset, form, label, legend,table, caption,
+tbody, tfoot, thead, tr, th, td,article, aside, canvas, details,
+embed, figure, figcaption, footer, header, hgroup, menu, nav,
+output, ruby, section, summary,time, mark, audio, video { 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+body, html {
+    height: 100%
+}
+img,fieldset {border:none;}
+input[type="submit"], button {cursor:pointer;}
+input[type='submit']::-moz-focus-inner{padding:0;border:0}
+textarea {overflow: auto;}
+input, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+input, textarea, select,button,
+h1,h2,h3,h4,h5,h6,a,span,a:focus {
+    outline: none;
+}
+ul,ol {
+    list-style-type: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header,
+hgroup, menu, nav, section { 
+    display: block;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+*{-webkit-text-size-adjust: none; }
+/* ------------------------------------- //END Reset css --------------------------------------- */
+/* ----------------------------------------- Main styles --------------------------------------- */
 body{
-	font: {
-		family: Arial,sans-serif;
-		weight: normal;
-		size: 12px;
-	}
-	line-height:1.4;
+    min-width: 1000px;
+    color: #c9c9c9;
+    font-size: 15px;
+    line-height: 1.3;
+    @include mus_300;
+    background: url(../img/body-bg.jpg) 0 0 repeat;
 }
-// resets
-a img,fieldset{
-	border:none;
+a{
+    color:#6dcff6;
+    text-decoration:none;
 }
-// common styles, these could be attached to any block with "@extend %wyswyg;"
-%wyswyg{
-	p{
-		margin-bottom: 1em;
+.l-layout {
+	width: 1000px;
+    margin: 0 auto -120px;
+    position: relative;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+}
+.push {
+    clear: both;
+    height: 120px;
+}
+.wrapper {
+    overflow: hidden;
+}
+.wrap {
+    @include clr;
+}
+/* ------------------------------------ //END Main styles --------------------------------------- */
+ 
+/* ----------------------------------------- Header --------------------------------------------- */
+.header {
+	padding-top: 15px;
+	@include clr;
+}
+.logo {
+	float: left;
+	margin-top: 8px;
+	@include s(logo);
+}
+.nav {
+	float: right;
+	li {
+		float: left;
 	}
-	ul,ol{
-		margin: 1em 2em;
-		list-style: disc;
-	}
-	ol{
-		list-style: decimal;
-	}
-	blockquote{
-		margin: 1em 2em;
-	}
-	table{
-		border-spacing: 0;
-		border-collapse: collapse;
-		width: 100%;
-		td{
-			border: 1px solid #ccc;
-			padding: 5px;
+	a {
+		display: block;
+		color: #c9c9c9;
+		@include proxima;
+		padding: 0 33px;
+		height: 56px;
+		line-height: 56px;
+		&.is-active {
+			@include border-radius(10px 10px 0 0);
+			@include box-shadow(0 -1px 0 #000, inset 0 1px 0 #464646);
+			background: #1f1f1f;
 		}
+	} 
+}
+/* -------------------------------------- //END Header ------------------------------------------ */
+
+/* ------------------------------------- Independent blocks -------------------------------------- */
+.l-main {
+	@include box-shadow(0 0 1px #000);
+	@include border-radius(10px);
+	overflow: hidden;
+}
+.section {
+	padding: 0 50px;
+	background: #1f1f1f;
+	@include box-shadow(inset 0 -1px 0 #252525, inset 1px 0 0 #252525, inset -1px 0 0 #252525);
+}
+.section_dark {
+	background: #1b1b1b;
+}
+.btn-item {
+	display: inline-block;
+	vertical-align: middle;
+	.btn {
+		margin-bottom: 13px;
 	}
 }
+.info-item {
+	font-size: 13px;
+	color: #868686;
+	a {
+		color: #868686;
+	}
+}
+.btn {
+	display: inline-block;
+	padding: 0 20px;
+	height: 60px;
+	line-height: 60px;
+	border: 1px solid #000;
+	@include border-radius(8px);
+	background: #6dcff6;
+	color: #fff;
+	@include text-shadow(0 1px 1px rgba(0,0,0,.4));
+	@include box-sizing(border-box);
+	vertical-align: middle;
+	@include box-shadow(0 2px 4px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.2), inset 0 0 0 1px rgba(255,255,255,.1));
+	@include background-image(linear-gradient(bottom, #1f1f1f 0%, #373737 100%));
+	&:hover {
+		background: #ebebed;
+		@include box-shadow(0 2px 4px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.2), inset 0 0 0 1px rgba(255,255,255,.1));
+		@include background-image(linear-gradient(bottom, rgba(31,31,31,.9) 0%, rgba(56,56,56,.9) 100%));
+	}
+	&:active {
+		border: 1px solid #131313;
+		background: #ebebed;
+		@include box-shadow(inset 0 3px 3px rgba(0,0,0,.4), inset 0 0 10px rgba(0,0,0,.1));
+		@include background-image(linear-gradient(bottom, #252525 0%, #373737 100%));
+	}
+	&.is-marked {
+		@include box-shadow(0 0 0 2px #129dff, 0 0 15px rgba(19,157,255,.18), inset 0 1px 0 rgba(255,255,255,.4));
+	}
+	div {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 1;
+	}
+	span {
+		display: block;
+		font-size: 17px;
+	}
+	strong {
+		@include mus_700;
+		font-size: 21px;
+	}
+	.icon {
+		margin: -8px 15px 0 0;
+	}
+}	
+.btn_apple {
+	width: 231px;
+	margin-right: 22px;
+}
+.btn_download {
+	padding-left: 15px;
+}
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+}
+.icon_apple {@include s(apple);}
+.icon_download {@include s(download);}
+
+.title-l-1 {
+	margin: 0 auto;
+	width: 75%;
+	font-size: 29px;
+	text-align: center;
+	@include mus_100;
+	strong {
+		@include mus_700;
+	}
+}
+.title-l-4 {
+	font-size: 25px;
+	@include mus_300;
+	strong {
+		@include mus_700;
+	}
+}
+.title-l-5 {
+	margin-bottom: 7px;
+	font-size: 23px;
+	color: #7d7d7d;
+	@include mus_300;
+}
+/* ---------------------------------- //END Independent blocks ----------------------------------- */
+
+/* ----------------------------------------- Footer ---------------------------------------------- */
+.footer {
+    position: relative;
+    height: 120px;
+}
+/* -------------------------------------- //END Footer ------------------------------------------- */  

@@ -1,20 +1,201 @@
 <!doctype html>
-<!--[if lte IE 8]><html class="lteie8"><![endif]-->
-<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<!--[if lte IE 8]><html lang="ru-RU" class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<title>Template</title>
-	<meta name="viewport" content="width=device-width"/>
-	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	<script src="js/app.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Template</title>
+    <link rel="stylesheet" media="screen" href="css/screen.css" >
+    <script src="js/jquery.tools.min.js"></script>
+    <script src="js/jquery.cycle2.js"></script>
+    <script src="js/common.js"></script>  
+    <!--[if lt IE 9]> 
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+    <![endif]-->
 </head>
 <body>
+<div class="l-layout">
+    <header class="header">
+        <a href="#" class="logo"></a>
+        <ul class="nav">
+            <li><a href="#" class="is-active">Home</a></li>
+            <li><a href="#">Store</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </header>
+    <div class="l-main">
+        <section class="section promo">
+            <div class="promo__left">
+                <div class="promo__title">See what takes up your disk space</div>
+                <img src="img/img2.png" alt="">
+                <div class="promo__text">DaisyDisk scans your disks and presents their content
+                    as interactive maps where you can easily spot unusually large files and remove them to get more free space. The map gives you an overview of your data, so you
+                    always know what your hard disks are filled with.
+                </div>
+                <div class="download">
+                    <div class="btn-item">
+                        <a href="#" class="btn btn_apple">
+                            <i class="icon icon_apple"></i>
+                            <div>
+                                <span>Available on the</span>
+                                <strong>Mac App Store</strong>
+                            </div>
+                        </a>
+                        <div class="info-item">
+                            ★★★★★ 1345 Ratings, only $9,95
+                        </div>
+                    </div>
+                    <div class="btn-item">
+                        <a href="#" class="btn btn_download is-marked">
+                            <i class="icon icon_download"></i>
+                            <strong>Download</strong>
+                        </a>
+                        <div class="info-item">
+                            Try DaisyDisk for free. OS X 10.6+ 
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <div class="promo__right">
+                <img src="img/img1.png" alt="">
+                <div class="info-item"><a href="#">Follow @DaisyDisk on Twitter</a>   |   <a href="#">Like DaisyDisk on Facebook</a></div>
+            </div>
+        </section>
+        <div class="slider">
+            <i class="slider__stripes"></i>
+            <div class="slider__wrap">
+                <h1 class="title-l-1"><strong>Whats new in DaisyDisk 3.</strong> See in action.</h1>
+                <div class="slider__text">
+                    <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+                    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.</p>
+                </div>
+                <!-- <div class="pager">
+                    <button></button>
+                    <button class="is-active"></button>
+                </div> -->
+            </div>
+        </div>
+        <section class="section review-slider-wrap">
+            <div class="review-slider">
+                <div class="cycle-slideshow" 
+                data-cycle-fx=scrollHorz
+                data-cycle-timeout="0"
+                data-cycle-pager=".cycle-pager"
+                data-cycle-pager-template=""
+                data-cycle-prev=".js-prev"
+                data-cycle-next=".js-next"
+                data-cycle-slides="> div"
+                data-cycle-pager-event="mouseover"
+                >
+                <div>
+                    “This disk space calculator comes with one brilliant,</br> smooth, and intuitive workflow, that makes the eye pop!”
+                </div>
+                <div>
+                    “This disk space calculator comes with one brilliant,</br> smooth, and intuitive workflow, that makes the eye pop!”
+                </div>
+                <div>
+                    “This disk space calculator comes with one brilliant,</br> smooth, and intuitive workflow, that makes the eye pop!”
+                </div>
+                <div>
+                    “This disk space calculator comes with one brilliant,</br> smooth, and intuitive workflow, that makes the eye pop!”
+                </div>
+                <div>
+                    “This disk space calculator comes with one brilliant,</br> smooth, and intuitive workflow, that makes the eye pop!”
+                </div>
+                </div>
+                <button class="btn-prev js-prev"></button>
+                <button class="btn-next js-next"></button>
+            </div>
+            <div class="cycle-pager">
+                <img src="img/1.png" alt="">
+                <img src="img/2.png" alt="">
+                <img src="img/3.png" alt="">
+                <img src="img/4.png" alt="">
+                <img src="img/5.png" alt="">
+                <!-- don't delete empty img -->
+                <img src="" alt="">
+            </div>
+        </section>
+        <section class="section section_dark section_table">
+            <div class="section__wrap">
+                <div class="section__col section__col-img">
+                    <img src="img/img3.png" alt="">
+                </div>
+                <div class="section__col">
+                    <h3 class="title-l-4"><strong>Why DaisyDisk</strong></h3>
+                    <h4 class="title-l-5">Cumis sociis natoque penatibus</h4>
+                    <p>No matter how large your disks are, the amounts of data you store on them grow too fast. You can ease your life for a while by using one of automatic "cleaners" to save a few hundred megabytes or even a few gigabytes but very soon you'll face the same problem. We propose a better solution: <a href="#">find out real space wasters and remove them.</a> Fast and easy. DaisyDisk scans your disks and display them in a form of the interactive visual map,
+                    so you can find out where the space have gone, preview and delete large files and folders you no longer need. You can find out a long ago forgotten virtual machine image, huge cache file or a DVD movie rip you wanted to see during last year's vacation.</p>
 
-<!-- BEGIN  out-->
-<div class="out">
+                    <p>Speak on your language: <span>English, Français, Deutsch, Italiano, Español, Português, Dansk, Nederlands, Ελληικά, Polski, Svenska, Català, Bahasa Indonesia, 中文, 日本語, ภาษาไทย.</span></p>
+                </div>
+            </div>
+        </section>
+        <section class="section section_table">
+            <div class="section__wrap">
+                <div class="section__col">
+                    <h3 class="title-l-4"><strong>Details do matter</strong></h3>
+                    <h4 class="title-l-5">Praesent commodo cursus magna</h4>
+                    <p>DaisyDisk is not only <a href="#">visually appealing</a> it's also <a href="#">very easy to use</a>. Once scanned, your disk is displayed as sunburst map, a very visual representation of all your files and folders. We have put many efforts into improving original sunburst map and the application's interface to ensure it leaves competition far behind. Consistent coloring and familiar navigation makes sure you won't get lost in data debris, fine-tuned disk map provides relevant information and preview is right when you need it. Animated transitions are not just eye candy, they improve navigation. There's much more than meets the eye.</p>
+                </div>
+                <div class="section__col section__col-img">
+                    <img src="img/img4.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="section section_dark section_table">
+            <div class="section__wrap">
+                <div class="section__col section__col-img">
+                    <img src="img/img5.png" alt="">
+                </div>
+                <div class="section__col">
+                    <h3 class="title-l-4"><strong>All disks at a glance</strong></h3>
+                    <h4 class="title-l-5">Cras justo odio, dapibus</h4>
+                    <p>DaisyDisk gives you a perfect <a href="#">overview of all volumes currently mounted</a>, be it internal disk, USB thumbstick, FireWire drive, network or even virtual disk mounted with FUSE. Mount disk images, attach external drives and they're immediately displayedin DaisyDisk's list. Add, delete files, unmount disks... all the changes are real time, so you always know which volumes are mounted
+                    and how much free space you have on each of them. You can also get volume info and eject volumes from within the application.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section section_table">
+            <div class="section__wrap">
+                <div class="section__col">
+                    <h3 class="title-l-4"><strong>Lightning fast</strong></h3>
+                    <h4 class="title-l-5">Praesent commodo cursus magna</h4>
+                    <p>Modern hard disks can be as big as several terabytes and contain millions of files and folders. Scanning such amounts of data can take significant time even on modern hardware as disk speed cannot catch up to the growth of the capacity. We have <a href="#">fine-tuned</a> our <a href="#">scanning engine</a> so disk analysis runs as fast as possible. As a result, DaisyDisk outperforms competing products in scan speed by up to 50%. Hey, DaisyDisk won't even choke on Time Machine disks which causes many "disk scanners" to freeze or crash.</p>
+                </div>
+                <div class="section__col section__col-img">
+                    <img src="img/img6.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="section section_dark section_table">
+            <div class="section__wrap">
+                <div class="section__col section__col-img">
+                    <img src="img/img7.png" alt="">
+                </div>
+                <div class="section__col">
+                    <h3 class="title-l-4"><strong>You Clouds on other angel</strong></h3>
+                    <h4 class="title-l-5">Vulputate vestibulum parturient</h4>
+                    <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet.Etiam porta sem malesuada magna mollis euismod.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section section_table section_table-small">
+            <div class="section__wrap">
+                <div class="section__col">
+                    <h3 class="title-l-4"><strong>Apple featured DaisyDisk:</strong></h3>
+                    <p><a href="#">Best Utilitie of Mac App Store in 2011, <br> Getting Things Done</a>, and Staff Favorite.</p>
+                </div>
+                <div class="section__col section__col-img">
+                    <img src="img/img8.png" alt="">
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="push"></div>
 
-</div>
-<!-- END out-->
-
+<footer class="footer"></footer>
 </body>
 </html>

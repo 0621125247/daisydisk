@@ -1,23 +1,28 @@
 .promo {
     @include clr;
-    padding: 50px;
+    padding: 51px 50px 34px;
 }
 .promo__left {
     float: left;
+    padding-top: 10px;
     width: 51%;
 }
 .promo__right {
     float: right;
     width: 44.5%;
+    .info-item {
+        text-align: center;
+    }
 }
 .promo__title {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
     font-size: 30px;
     @include mus_100;
 }
 .promo__text {
     margin-top: 9px;
     font-size: 17px;
+    line-height: 1.2;
 }
 .download {
     margin-top: 45px;
@@ -64,7 +69,7 @@
 } 
 
 .review-slider-wrap {
-    padding-top: 77px;
+    padding: 77px 50px 46px;
 }
 .review-slider {
     position: relative;
@@ -81,25 +86,24 @@
 .btn-next {
     position: absolute;
     top: 50%;
-    margin-top: -22px;
+    margin-top: -26px;
 }
 .btn-prev {
-    left: -50px;
+    left: -31px;
     @include s(prev);
 }
 .btn-next {
-    right: -50px;
+    right: -31px;
     @include s(next);
 }
 .cycle-pager {
-    margin: 0 auto;
+    margin: 22px auto 0;
     width: 840px;
     text-align: justify;
     img {
         vertical-align: middle;
         @include gray;
         @include scale(.7);
-        vertical-align: middle;
         &:last-child {
             height: 0;
             width: 100%;

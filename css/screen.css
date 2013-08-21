@@ -141,7 +141,7 @@ a {
 
 .logo {
   float: left;
-  margin-top: 8px;
+  margin: 8px 0 0 49px;
   background: url('../img/icons-s374a5834a7.png') 0 0 no-repeat;
   width: 267px;
   height: 24px; }
@@ -156,6 +156,7 @@ a {
     font-family: 'proxima_nova_rgbold', Arial, sans-serif;
     font-weight: normal;
     padding: 0 33px;
+    font-size: 17px;
     height: 56px;
     line-height: 56px; }
     .nav a.is-active {
@@ -196,7 +197,7 @@ a {
   display: inline-block;
   vertical-align: middle; }
   .btn-item .btn {
-    margin-bottom: 13px; }
+    margin-bottom: 18px; }
 
 .info-item-wrap {
   margin-top: 26px; }
@@ -224,7 +225,7 @@ a {
 .btn {
   display: inline-block;
   padding: 0 20px;
-  height: 60px;
+  height: 62px;
   line-height: 60px;
   border: 1px solid #000;
   -webkit-border-radius: 8px;
@@ -283,15 +284,18 @@ a {
     font-family: 'museo_sans700', Arial, sans-serif;
     font-weight: normal;
     font-size: 21px; }
-  .btn .icon {
-    margin: -8px 15px 0 0; }
 
 .btn_apple {
   width: 231px;
-  margin-right: 22px; }
+  margin-right: 24px; }
+  .btn_apple .icon {
+    margin: -8px 8px 0 0; }
 
 .btn_download {
-  padding-left: 15px; }
+  padding: 0 0 0 15px;
+  width: 183px; }
+  .btn_download .icon {
+    margin: -2px 8px 0 0; }
 
 .icon {
   display: inline-block;
@@ -432,7 +436,7 @@ a {
 /* -------------------------------------- //END Footer ------------------------------------------- */
 .promo {
   *zoom: 1;
-  padding: 50px; }
+  padding: 51px 50px 34px; }
   .promo:before, .promo:after {
     content: " ";
     display: table; }
@@ -441,21 +445,25 @@ a {
 
 .promo__left {
   float: left;
+  padding-top: 10px;
   width: 51%; }
 
 .promo__right {
   float: right;
   width: 44.5%; }
+  .promo__right .info-item {
+    text-align: center; }
 
 .promo__title {
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   font-size: 30px;
   font-family: 'museo_sans100', Arial, sans-serif;
   font-weight: normal; }
 
 .promo__text {
   margin-top: 9px;
-  font-size: 17px; }
+  font-size: 17px;
+  line-height: 1.2; }
 
 .download {
   margin-top: 45px; }
@@ -509,7 +517,7 @@ a {
     box-shadow: 0 0 0 2px #ebe3d3; }
 
 .review-slider-wrap {
-  padding-top: 77px; }
+  padding: 77px 50px 46px; }
 
 .review-slider {
   position: relative;
@@ -526,22 +534,22 @@ a {
 .btn-next {
   position: absolute;
   top: 50%;
-  margin-top: -22px; }
+  margin-top: -26px; }
 
 .btn-prev {
-  left: -50px;
+  left: -31px;
   background: url('../img/icons-s374a5834a7.png') 0 -176px no-repeat;
   width: 24px;
   height: 44px; }
 
 .btn-next {
-  right: -50px;
+  right: -31px;
   background: url('../img/icons-s374a5834a7.png') 0 -122px no-repeat;
   width: 24px;
   height: 44px; }
 
 .cycle-pager {
-  margin: 0 auto;
+  margin: 22px auto 0;
   width: 840px;
   text-align: justify; }
   .cycle-pager img {
@@ -558,8 +566,7 @@ a {
     -moz-transform: scale(0.7, 0.7);
     -ms-transform: scale(0.7, 0.7);
     -o-transform: scale(0.7, 0.7);
-    transform: scale(0.7, 0.7);
-    vertical-align: middle; }
+    transform: scale(0.7, 0.7); }
     .cycle-pager img:last-child {
       height: 0;
       width: 100%; }

@@ -78,7 +78,7 @@ a{
 }
 .logo {
 	float: left;
-	margin-top: 8px;
+	margin: 8px 0 0 49px;
 	@include s(logo);
 }
 .nav {
@@ -91,6 +91,7 @@ a{
 		color: #c9c9c9;
 		@include proxima;
 		padding: 0 33px;
+		font-size: 17px;
 		height: 56px;
 		line-height: 56px;
 		&.is-active {
@@ -120,7 +121,7 @@ a{
 	display: inline-block;
 	vertical-align: middle;
 	.btn {
-		margin-bottom: 13px;
+		margin-bottom: 18px;
 	}
 }
 .info-item-wrap {
@@ -153,7 +154,7 @@ a{
 .btn {
 	display: inline-block;
 	padding: 0 20px;
-	height: 60px;
+	height: 62px;
 	line-height: 60px;
 	border: 1px solid #000;
 	@include border-radius(8px);
@@ -191,16 +192,20 @@ a{
 		@include mus_700;
 		font-size: 21px;
 	}
-	.icon {
-		margin: -8px 15px 0 0;
-	}
 }	
 .btn_apple {
 	width: 231px;
-	margin-right: 22px;
+	margin-right: 24px;
+	.icon {
+		margin: -8px 8px 0 0;
+	}
 }
 .btn_download {
-	padding-left: 15px;
+	padding: 0 0 0 15px;
+	width: 183px;
+	.icon {
+		margin: -2px 8px 0 0;
+	}
 }
 .icon {
 	display: inline-block;

@@ -344,7 +344,11 @@ a {
   text-align: center; }
 
 .big-slider {
-  position: relative; }
+  position: relative;
+  margin-bottom: 44px;
+  height: 395px; }
+  .big-slider .cycle-slideshow {
+    height: 395px; }
   .big-slider .btn-prev {
     left: 0;
     background: url('../img/icons-s374a5834a7.png') 0 -176px no-repeat;
@@ -356,21 +360,17 @@ a {
     width: 24px;
     height: 44px; }
   .big-slider .cycle-slide {
+    margin: 100px 0 0;
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
     -o-transition: all 0.2s linear;
-    transition: all 0.2s linear;
-    -webkit-transform: scale(0.5, 0.5);
-    -moz-transform: scale(0.5, 0.5);
-    -ms-transform: scale(0.5, 0.5);
-    -o-transform: scale(0.5, 0.5);
-    transform: scale(0.5, 0.5); }
-  .big-slider .cycle-slide-active {
-    -webkit-transform: scale(1, 1);
-    -moz-transform: scale(1, 1);
-    -ms-transform: scale(1, 1);
-    -o-transform: scale(1, 1);
-    transform: scale(1, 1); }
+    transition: all 0.2s linear; }
+  .big-slider .is-big {
+    -webkit-transform: scale(2, 2);
+    -moz-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    -o-transform: scale(2, 2);
+    transform: scale(2, 2); }
 
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 /* ----------------------------------------- Footer ---------------------------------------------- */
@@ -482,7 +482,8 @@ a {
 
 .slider__text {
   font-size: 17px;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 40px; }
 
 .pager {
   font-size: 0;

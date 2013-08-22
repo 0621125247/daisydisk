@@ -21,7 +21,7 @@ $(document).ready(function() {
         $(".cycle-slide").removeClass("is-big");
         $(".cycle-slide-active").next().next().addClass("is-big");
     });
-    $( '.js-slider' ).on( 'cycle-transition-stopped', function( event, opts ) {
+    $( '.js-slider' ).on( 'cycle-pager-activated', function( event, opts ) {
         // $(".cycle-slide").removeClass("is-big");
         // $(".cycle-slide-active").next().next().addClass("is-big");
         alert();

@@ -119,27 +119,23 @@
 }
 
 .section_table {
-    display: table;
-    width: 100%;
     padding: 0;
-    table-layout: fixed;
+    @include clr;
     .section__col {
-        padding: 35px 0;
-        display: table-cell;
-        vertical-align: middle;
+        float: left;
         word-break: break-all;
         &:first-child {
             padding-left: 50px;
         }
         &:last-child {
             padding-right: 50px;
+            padding-left: 11px;
         }
     }
 }
-.section__wrap {
-    display: table-row;
-}
 .section__col {
+    width: 50%;
+    @include box-sizing(border-box);
     p {
         margin-bottom: 21px;
     }
@@ -148,23 +144,82 @@
     }
 }
 .section__col-img {
-    text-align: center;
+    
 }
 
-.section_table-small {
+
+
+.section_info {
+    padding: 70px 0 26px;
+    .section__col {
+        
+    }
+    .section__col-img {
+    }
+    img {
+        margin-left: 31px;
+    }
+}
+.section_explain {
+    .section__col {
+        padding: 28px 0 12px;
+    }
+    img {
+        margin-top: 60px;
+    }
+}
+.section_details {
+    .section__col {
+        padding: 93px 0 41px;
+    }
+    .section__col-img {
+        text-align: center;
+        margin-top: -59px;
+    }
+}
+.section_fast {
+    padding: 68px 0 39px;
+    .section__col-img {
+        text-align: center;
+    }
+    img {
+        margin-left: 44px;
+    }
+}
+.section_cloud {
+    padding: 35px 0 26px;
+    .section__col {
+        padding-top: 36px;
+    }
+    .section__col-img {
+        padding-top: 0;
+    }
+    img {
+        
+    }
+}
+.section_small {
     p {
         font-size: 19px;
         margin-top: 14px;
     }
     .section__col {
-        padding: 0;
+       padding: 39px 0 0 70px !important;
+    }
+    .section__col-img {
+        padding: 0 !important;
+    }
+    img {
+        margin-left: -43px;
     }
 }
-
 .section_download {
-    padding: 75px 0 62px;
+    padding: 67px 0 60px;
     text-align: center;
     .title-l-1 {
-        margin-bottom: 31px;
+        margin-bottom: 28px;
+    }
+    .btn {
+        margin: 0;
     }
 }
